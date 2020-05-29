@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<img src="{% static 'images/background.png'%}" alt="intro" width="50%" height="50%" class="center">
+<form action="{% url 'action' %}" method="GET">
+    <P><b>Name For</b></P>
+    {% for category in categories%}
+    <input type="radio" name="category" value="{{category.title}}">
+    <label for="{{category.title}}"> {{category.title}}</label><br>
+    {%endfor%}
+
+    <p><b>Gender</b></p>
+    {%for gender in genders%}
+    <input type="radio" name="gender" value="{{gender.title}}">
+    <label for="{{gender.title}}">{{gender.title}}</label><br>
+    {%endfor%}
+
+
+    <input type="submit" value="Generate" style="background-color:#fd5825;color: white">
+
+</form>
+
+{% endblock %}
