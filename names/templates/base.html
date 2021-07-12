@@ -10,8 +10,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <title>NameFairy!</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="icon" href="{% static 'icon.png' %}" type="image/icon type">
+    <title>NameFairy</title>
     <style>
         .center {
             display: block;
@@ -22,6 +24,27 @@
 
         body {
             background-color: #f7efe5;
+            font-family: 'Montserrat';
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .button {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            width: 20%;
+            background-color: #fd5825;
+            color: white;
+            border: 0ch;
+            border-radius: 14px;
+            padding: 5px 5px;
+            font-weight: bold;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
 
         }
     </style>
@@ -33,6 +56,12 @@
             <img src="{% static 'images/logo.png' %}" width="15%" height="5%" class="d-inline-block align-top"
                 alt="logo" loading="lazy">
         </a>
+        <div class="right hide-on-med-and-down">
+
+            <a href="http://www.marjanajuthi.com/#portfolio">
+                <i class="material-icons" style="color: orangered;">view_module</i>
+            </a>
+        </div>
     </nav>
     <div class="container">
         {% block content %}

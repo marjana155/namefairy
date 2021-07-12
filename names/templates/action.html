@@ -1,7 +1,14 @@
 {% extends 'base.html'%}
 {% load static %}
 {% block content %}
+<br>
+<br>
 <img src="{% static 'images/background.png'%}" alt="intro" width="50%" height="50%" class="center">
-<h1>{{name}}</h1>
-<button style="background-color: #fd5825;"> <a href="{% url 'home' %}" style="color: white;">Try Again</a></button>
+<br><br>
+<h1 class="center" style="font-size:5vw;">{{name}}</h1>
+<br><br>
+<button class="button">
+    <a href="{% url 'home' %}" style="color: white;">
+        Try Again
+    </a></button>
 {%endblock%}

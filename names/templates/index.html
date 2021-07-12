@@ -1,24 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
+<br>
+<br>
 <img src="{% static 'images/background.png'%}" alt="intro" width="50%" height="50%" class="center">
 <form action="{% url 'action' %}" method="GET">
     <P><b>Name For</b></P>
     {% for category in categories%}
-    <input type="radio" name="category" value="{{category.title}}">
-    <label for="{{category.title}}"> {{category.title}}</label><br>
+    <input type="radio" id='category' name="category" value="{{category.title}}" required>
+    <label for="{{category.title}}"> {{category.title}}</label>
     {%endfor%}
-
+    <br>
     <p><b>Gender</b></p>
     {%for gender in genders%}
-    <input type="radio" name="gender" value="{{gender.title}}">
-    <label for="{{gender.title}}">{{gender.title}}</label><br>
+    <input type="radio" id='gender' name="gender" value="{{gender.title}}" required>
+    <label for="{{gender.title}}">{{gender.title}}</label>
     {%endfor%}
-
-
-    <input type="submit" value="Generate" style="background-color:#fd5825;color: white">
-
+    <br>
+    <p><b>First Letter (Input one letter only) </b></p>
+    <input type="text" id="letter" name="letter" pattern="[A-Za-z]{1}">
+    <br>
+    <br>
+    <input type="submit" value="Generate" class="button btn btn-primary">
 </form>
+
 
 {% endblock %}
